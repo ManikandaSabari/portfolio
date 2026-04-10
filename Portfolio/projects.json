@@ -1,0 +1,44 @@
+[
+  {
+    "id": "01",
+    "title": "AI-Driven Healthcare Using CNN & SVM",
+    "description": "Developed AI models using CNN for medical image analysis and SVM for structured patient data to predict diseases and treatment outcomes. Achieved enhanced diagnostic accuracy and intelligent clinical decision support in healthcare systems.",
+    "stack": [
+      "Python",
+      "CNN",
+      "SVM",
+      "TensorFlow",
+      "OpenCV"
+    ],
+    "github": "https://github.com/ManikandaSabari",
+    "live": "#"
+  },
+  {
+    "id": "02",
+    "title": "CNN vs Random Forest – Healthcare Comparative Study",
+    "description": "Conducted a comparative study using CNN and Random Forest for disease diagnosis from medical images and structured patient records. CNN handled image-based analysis while Random Forest classified tabular clinical data, improving overall diagnostic outcomes.",
+    "stack": [
+      "Python",
+      "CNN",
+      "Random Forest",
+      "Scikit-learn",
+      "Pandas"
+    ],
+    "github": "https://github.com/ManikandaSabari",
+    "live": "#"
+  },
+  {
+    "id": "03",
+    "title": "MSQUARE PITSTOP – Inventory & Sales Optimizer",
+    "description": "Built an intuitive dashboard for tyre retailers using HTML, CSS, JavaScript, and React to manage stock levels, inventory tracking, customer bookings, billing, and generate reports, reducing stockouts by 30% in pilot testing.",
+    "stack": [
+      "Python",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React"
+    ],
+    "github": "https://github.com/ManikandaSabari",
+    "live": "#"
+  }
+]

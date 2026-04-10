@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manikanda Sabari S – Portfolio</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">MS</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#certs">Certs</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-inner">
+      <div class="hero-tag">
+        <span class="tag-dot"></span>Open to Placements
+      </div>
+      <h1>
+        Hello, I'm <br /><em>Manikanda Sabari S</em>
+      </h1>
+      <p class="hero-sub">
+        Aspiring Software Engineer | Full Stack Developer & Data Scientist
+      </p>
+
+      <div class="hero-avatar-card">
+        <div class="avatar-wrap">
+          <div class="avatar-ring">
+            <div class="avatar-inner">
+              <div class="avatar-initials">MS</div>
+              <div class="avatar-role">Developer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="btns">
+        <button onclick="openCert('sabari_resume.pdf')" class="btn-p">View Resume ↗</button>
+        <a href="#contact" class="btn-o">Hire Me →</a>
+      </div>
+
+      <p class="hero-college">📍 Saveetha School of Engineering, Chennai</p>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-num">8.83</div>
+      <div class="stat-lbl">CGPA</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">2</div>
+      <div class="stat-lbl">Internships</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">2</div>
+      <div class="stat-lbl">Projects</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">2</div>
+      <div class="stat-lbl">Certifications</div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="sec-label">01 — Who I Am</div>
+    <div class="sec-title">About <span>Me</span></div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          I’m Manikanda Sabari S, a third-year B.Tech student in Artificial Intelligence and Data Science at Saveetha
+          School of Engineering, Chennai, with a strong interest in software development and data-driven systems.
+        </p>
+        <p>
+          I’ve completed internships at 8Queens Software Technologies in full stack development and data analytics,
+          where I worked on real-time projects and gained hands-on experience in building and analyzing applications.
+        </p>
+        <p>
+          I’m an Oracle Certified Java SE 17 Developer and certified in Database Management Systems, with a solid
+          foundation in programming, backend development, and working with structured data. I enjoy building practical
+          solutions and continuously improving my technical skills.
+        </p>
+      </div>
+      <div class="glass-card">
+        <div class="info-row">
+          <span class="info-label">Full Name</span><span class="info-val">Manikanda Sabari S</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Degree</span><span class="info-val">B.Tech – AI&DS</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">College</span><span class="info-val">Saveetha School of Engineering</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">CGPA</span><span class="info-val">8.83 / 10</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Internships</span><span class="info-val">8Queens Software Technologies Pvt Ltd</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Certifications</span><span class="info-val">Oracle SQL & Java</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Status</span><span class="info-val ac">Available for Placement</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="sec-label">02 — My Tech Stack</div>
+    <div class="sec-title">Skills & <span>Technologies</span></div>
+    <div id="skills-container"></div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="sec-label">03 — What I've Built</div>
+    <div class="sec-title">Featured <span>Projects</span></div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="proj-img">
+          <img src="proj_1.png" alt="AI-Driven Healthcare">
+        </div>
+        <div class="proj-content">
+          <div class="proj-header">
+            <div class="proj-title">AI-Driven Healthcare Using CNN & SVM</div>
+            <div class="proj-links">
+              <a href="https://github.com/ManikandaSabari" target="_blank" title="GitHub"><i
+                  class="devicon-github-original"></i></a>
+              <a href="#" title="Live Demo"><i class="cicon-external">🔗</i></a>
+            </div>
+          </div>
+          <div class="proj-desc">
+            Developed AI models using CNN for medical image analysis and SVM for
+            structured patient data to predict diseases and treatment outcomes.
+          </div>
+          <div class="proj-stack">
+            <span class="stag">Python</span><span class="stag">CNN</span><span class="stag">SVM</span><span
+              class="stag">TensorFlow</span><span class="stag">OpenCV</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="proj-img">
+          <img src="proj_2.png" alt="Healthcare Comparative Study">
+        </div>
+        <div class="proj-content">
+          <div class="proj-header">
+            <div class="proj-title">CNN vs Random Forest – Comparative Study</div>
+            <div class="proj-links">
+              <a href="https://github.com/ManikandaSabari" target="_blank" title="GitHub"><i
+                  class="devicon-github-original"></i></a>
+              <a href="#" title="Live Demo"><i class="cicon-external">🔗</i></a>
+            </div>
+          </div>
+          <div class="proj-desc">
+            Conducted a comparative study using CNN and Random Forest for
+            disease diagnosis from medical images and structured patient
+            records.
+          </div>
+          <div class="proj-stack">
+            <span class="stag">Python</span><span class="stag">CNN</span><span class="stag">Random Forest</span><span
+              class="stag">Scikit-learn</span><span class="stag">Pandas</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="proj-img">
+          <img src="proj_3.png" alt="MSQUARE PITSTOP Dashboard">
+        </div>
+        <div class="proj-content">
+          <div class="proj-header">
+            <div class="proj-title">MSQUARE PITSTOP – Inventory & Sales Optimizer</div>
+            <div class="proj-links">
+              <a href="https://github.com/ManikandaSabari" target="_blank" title="GitHub"><i
+                  class="devicon-github-original"></i></a>
+              <a href="#" title="Live Demo"><i class="cicon-external">🔗</i></a>
+            </div>
+          </div>
+          <div class="proj-desc">
+            Built an intuitive dashboard for tyre retailers using HTML, CSS, JavaScript, and React to manage stock
+            levels, inventory tracking, customer bookings, billing, and generate reports, reducing stockouts by 30% in
+            pilot testing.
+          </div>
+          <div class="proj-stack">
+            <span class="stag">Python</span><span class="stag">HTML</span><span class="stag">CSS</span><span
+              class="stag">JavaScript</span><span class="stag">React</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="sec-label">04 — Work Experience</div>
+    <div class="sec-title">Internships & <span>Education</span></div>
+    <div class="timeline">
+      <div class="titem">
+        <div class="tdate">
+          <div class="tperiod">2024</div>
+          <div class="ttype">Internship</div>
+        </div>
+        <div class="tdot"></div>
+        <div class="tbody">
+          <div class="trole">Full Stack Web Development Intern</div>
+          <div class="torg">Queens Software Technologies</div>
+          <div class="tdesc">
+            Worked as a Full Stack Developer intern contributing to end-to-end
+            web application development using modern technologies.
+          </div>
+          <div class="tbullets">
+            <div class="tbullet">
+              Built and deployed responsive web applications using HTML, CSS,
+              JavaScript and React.js for dynamic front-end interfaces.
+            </div>
+            <div class="tbullet">
+              Developed and integrated RESTful APIs using Node.js and Express,
+              connecting front-end components with backend services.
+            </div>
+            <div class="tbullet">
+              Managed relational databases using MySQL — designed schemas,
+              wrote optimized queries, and handled CRUD operations.
+            </div>
+            <div class="tbullet">
+              Collaborated with senior developers using Git for version
+              control and participated in Agile sprint planning and code
+              reviews.
+            </div>
+            <div class="tbullet">
+              Improved application load time by optimizing component rendering
+              and implementing lazy loading strategies in React.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="titem">
+        <div class="tdate">
+          <div class="tperiod">2024</div>
+          <div class="ttype">Internship</div>
+        </div>
+        <div class="tdot"></div>
+        <div class="tbody">
+          <div class="trole">Data Analyst Intern</div>
+          <div class="torg">Queens Software Technologies</div>
+          <div class="tdesc">
+            Worked as a Data Analyst intern focused on extracting actionable
+            business insights from large datasets using analytical tools and
+            techniques.
+          </div>
+          <div class="tbullets">
+            <div class="tbullet">
+              Collected, cleaned, and preprocessed large datasets using Python
+              (Pandas, NumPy) to ensure data quality and consistency.
+            </div>
+            <div class="tbullet">
+              Performed exploratory data analysis (EDA) to identify trends,
+              patterns, and anomalies in business and customer data.
+            </div>
+            <div class="tbullet">
+              Created interactive dashboards and reports using data
+              visualization tools to present insights clearly to stakeholders.
+            </div>
+            <div class="tbullet">
+              Wrote complex SQL queries to extract and aggregate data from
+              relational databases for reporting purposes.
+            </div>
+            <div class="tbullet">
+              Assisted in building predictive models using Scikit-learn to
+              forecast key business metrics with measurable accuracy
+              improvements.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="titem">
+        <div class="tdate">
+          <div class="tperiod">2021 – 2025</div>
+          <div class="ttype">Education</div>
+        </div>
+        <div class="tdot"></div>
+        <div class="tbody">
+          <div class="trole">B.Tech – Computer Science & Engineering</div>
+          <div class="torg">Saveetha School of Engineering, Chennai</div>
+          <div class="tdesc">
+            CGPA: 8.49 / 10 · Core subjects: Data Structures & Algorithms,
+            DBMS, Operating Systems, Machine Learning, AI, Computer Networks,
+            Web Development.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certs">
+    <div class="sec-label">05 — Credentials</div>
+    <div class="sec-title">Oracle <span>Certifications</span></div>
+    <div class="certs-grid">
+      <div class="cert-card">
+        <div class="cert-logo">🏛️</div>
+        <div class="cert-name">Oracle Database SQL Certified Specialist</div>
+        <div class="cert-issuer">Oracle University</div>
+        <div class="cert-badge">✦ Issued Nov 2024</div>
+        <button class="view-cert-btn" onclick="openCert('sql_cert.pdf')">View Certificate ↗</button>
+      </div>
+      <div class="cert-card">
+        <div class="cert-logo">☕</div>
+        <div class="cert-name">Oracle Certified Professional: Java SE 17 Developer</div>
+        <div class="cert-issuer">Oracle University</div>
+        <div class="cert-badge">✦ Issued Feb 2025</div>
+        <button class="view-cert-btn" onclick="openCert('java_cert.pdf')">View Certificate ↗</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="sec-title">Get in <span>Touch</span></div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-sub-title">Let's Connect</div>
+        <p class="contact-subtext">
+          I'm actively looking for placement opportunities in software
+          engineering, full stack development, data analytics, and AI/ML
+          roles. Whether you're a recruiter or just want to connect — feel
+          free to reach out!
+        </p>
+
+        <div class="contact-stack">
+          <div class="cs-item">
+            <div class="cs-icon">✉️</div>
+            <div class="cs-column">
+              <div class="cs-label">Email</div>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sabarisenthil06@gmail.com" target="_blank"
+                rel="noopener noreferrer" class="cs-value">sabarisenthil06@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="cs-item">
+            <div class="cs-icon">📍</div>
+            <div class="cs-column">
+              <div class="cs-label">Location</div>
+              <div class="cs-value">Chennai, Tamil Nadu</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="response-time">
+          <div class="rt-title">Response Time</div>
+          <p>I typically respond to messages within 24 hours.</p>
+        </div>
+      </div>
+      <div class="cform">
+        <div class="fg">
+          <label>Your Name</label><input type="text" id="from_name" placeholder="Recruiter's Name" required />
+        </div>
+        <div class="fg">
+          <label>Your Email</label><input type="email" id="from_email" placeholder="company@email.com" required />
+        </div>
+        <div class="fg">
+          <label>Subject</label><input type="text" id="subject" placeholder="Placement Opportunity / Collaboration" />
+        </div>
+        <div class="fg">
+          <label>Message</label><textarea id="message"
+            placeholder="Hi Manikanda, we'd like to connect about a placement opportunity..." required></textarea>
+        </div>
+        <button class="csub" id="csub" onclick="sendEmail()">
+          Send Message →
+        </button>
+        <div id="form-status" style="font-size: 13px; margin-top: 4px; display: none"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK CONTACT FOOTER -->
+  <section id="social-footer">
+    <div class="sf-title">Get in touch</div>
+    <div class="sf-row">
+      <div class="sf-item">
+        <span class="sf-icon">
+          <img src="https://cdn-icons-png.flaticon.com/512/484/484167.png" width="42" height="42" alt="Location">
+        </span>
+        <span class="sf-text">Chennai, Tamil Nadu</span>
+      </div>
+      <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="sf-item">
+        <span class="sf-icon">
+          <img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" width="42" height="42" alt="Discord">
+        </span>
+        <span class="sf-text">sabari_s</span>
+      </a>
+      <a href="https://www.linkedin.com/in/manikanda-sabari-s/" target="_blank" rel="noopener noreferrer"
+        class="sf-item">
+        <span class="sf-icon">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="42" height="42" alt="LinkedIn">
+        </span>
+        <span class="sf-text">Manikanda Sabari S</span>
+      </a>
+      <a href="https://github.com/ManikandaSabari" target="_blank" rel="noopener noreferrer" class="sf-item">
+        <span class="sf-icon">
+          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="42" height="42" alt="GitHub">
+        </span>
+        <span class="sf-text">ManikandaSabari</span>
+      </a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sabarisenthil06@gmail.com" target="_blank"
+        rel="noopener noreferrer" class="sf-item">
+        <span class="sf-icon">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" width="42" height="42" alt="Gmail">
+        </span>
+        <span class="sf-text">sabarisenthil06@gmail.com</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- CERTIFICATE MODAL -->
+  <div id="cert-modal" class="modal">
+    <div class="modal-overlay" onclick="closeCert()"></div>
+    <div class="modal-container">
+      <button class="close-modal" onclick="closeCert()">&times;</button>
+      <div class="modal-body">
+        <iframe id="cert-viewer" src="" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Built with passion by <span>Manikanda Sabari S</span> · 2025 · All rights
+    reserved
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

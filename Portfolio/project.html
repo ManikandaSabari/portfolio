@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects – Manikanda Sabari S</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    #projects-page {
+      padding-top: 140px;
+      min-height: 100vh;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      transition: transform 0.2s;
+    }
+
+    .back-btn:hover {
+      transform: translateX(-5px);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">MS</div>
+    <div class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#certs">Certs</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section id="projects-page">
+    <div class="container" style="max-width: 1200px; margin: 0 auto">
+      <a href="index.html" class="back-btn">← Back to Home</a>
+      <div class="sec-label">Portfolio</div>
+      <div class="sec-title">All <span>Projects</span></div>
+
+      <div id="dynamic-projects-grid" class="projects-grid">
+        <!-- Projects will be loaded here -->
+        <p style="color: var(--muted)">Loading projects...</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Built with passion by <span>Manikanda Sabari S</span> · 2025 · All rights
+    reserved
+  </footer>
+
+  <script>
+    async function loadProjects() {
+      const grid = document.getElementById("dynamic-projects-grid");
+      try {
+        const response = await fetch("projects.json");
+        if (!response.ok) throw new Error("Failed to load projects");
+        const projects = await response.json();
+
+        grid.innerHTML = projects
+          .map(
+            (p) => `
+            <div class="project-card">
+              <div class="proj-header" style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+                <div class="proj-num" style="margin-bottom: 0; color: var(--accent); font-size: 14px; font-weight: 700;">${p.id}</div>
+                <div class="proj-links">
+                  ${p.github ? `<a href="${p.github}" target="_blank" title="GitHub"><i class="devicon-github-original"></i></a>` : ""}
+                  ${p.live ? `<a href="${p.live}" target="_blank" title="Live Demo">🔗</a>` : ""}
+                </div>
+              </div>
+              <div class="proj-title">${p.title}</div>
+              <div class="proj-desc">${p.description}</div>
+              <div class="proj-stack">
+                ${p.stack.map((s) => `<span class="stag">${s}</span>`).join("")}
+              </div>
+            </div>
+          `,
+          )
+          .join("");
+      } catch (error) {
+        console.error(error);
+        grid.innerHTML = `<p style="color: #f87171">Error loading projects. Please try again later.</p>`;
+      }
+    }
+
+    window.onload = loadProjects;
+  </script>
+</body>
+
+</html>
